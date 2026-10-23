@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   build:
-    name: Build Cappuzo APK
+    name: Build APK
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -19,39 +19,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java 17
+      - name: Setup Java
         uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Setup Gradle
+      - name: Install Gradle
         uses: gradle/actions/setup-gradle@v6
         with:
+          gradle-version: '9.3.1'
           cache-disabled: true
 
-      - name: Check project files
-        run: |
-          echo "Java version:"
-          java -version
-          echo "Gradle files:"
-          ls -la
-          echo "Gradle wrapper:"
-          ls -la gradlew gradle/wrapper 2>/dev/null || true
-
-      - name: Make Gradle executable
-        run: chmod +x ./gradlew
-
-      - name: Clean project
-        run: ./gradlew clean --no-daemon
+      - name: Check Gradle
+        run: gradle --version
 
       - name: Build APK
-        run: ./gradlew assembleDebug --no-daemon --no-configuration-cache --stacktrace
-
-      - name: Find APK
-        run: |
-          echo "APK files:"
-          find app/build/outputs/apk -type f -name "*.apk" -print
+        run: gradle assembleDebug --no-daemon --no-configuration-cache --stacktrace
 
       - name: Upload APK
         if: success()
