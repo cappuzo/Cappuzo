@@ -23,17 +23,14 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Install Gradle
-        run: |
-          curl -fL https://services.gradle.org/distributions/gradle-9.3.1-bin.zip -o /tmp/gradle.zip
-          unzip -q /tmp/gradle.zip -d /tmp
+      - name: Make Gradle executable
+        run: chmod +x ./gradlew
 
       - name: Build APK
-        run: /tmp/gradle-9.3.1/bin/gradle assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Cappuzo-APK
           path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: error
