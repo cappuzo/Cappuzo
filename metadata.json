@@ -1,0 +1,6 @@
+{
+  "name": "Cappuzo – Arabic Poetry",
+  "description": "An exquisite Arabic poetry and literature application with daily verses, historical eras, poet biographies, diwans, and books.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

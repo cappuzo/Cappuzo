@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Cappuzo – Arabic Poetry</string>
+    <string name="app_arabic_name">كابوزو - ديوان الشعر والأدب</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_eras">العصور</string>
+    <string name="nav_poets">الشعراء</string>
+    <string name="nav_books">الكتب</string>
+    <string name="nav_saved">المحفوظات</string>
+    <string name="search_hint">ابحث عن شاعر، قصيدة، كتاب، أو حكمة…</string>
+    <string name="daily_verse_title">بيت اليوم المختارة</string>
+    <string name="eras_title">عصور الشعر العربي</string>
+    <string name="featured_poets">أعلام الشعر والأدب</string>
+    <string name="literary_quotes">أقوال ومأثورات أدبية</string>
+    <string name="recent_books">أحدث الكتب والدواوين</string>
+    <string name="btn_bookmark">حفظ</string>
+    <string name="btn_share">مشاركة</string>
+    <string name="btn_copy">نسخ</string>
+    <string name="daily_notification_title">إشعار بيت اليوم</string>
+    <string name="daily_notification_desc">تلقي بيت شعر مختار وحكمة أدبية يومياً</string>
+</resources>

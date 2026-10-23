@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Facebook lowercase 'f' vector path -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M14.5,13.5h2.5l1,-4h-3.5v-2c0,-1.05 0.35,-1.8 1.8,-1.8h1.7V2.15c-0.35,-0.05 -1.55,-0.15 -2.95,-0.15 -2.9,0 -4.9,1.75 -4.9,5v2.5H7v4h3.15V24h4.35V13.5z"/>
+</vector>
